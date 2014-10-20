@@ -48,11 +48,13 @@ ytop <- ymax#(ymax-ymin)*.85 + ymin
 # colors <- colorRampPalette(c("white","red"))(count)
 colors <- rainbow(count)
 colors[1] <- "white"
-colThresh <- 1:length(unique(sites$OrganizationFormalName))
+
+
+sites <- sites[order(sites$OrganizationFormalName, decreasing = TRUE),]
 
 MapSizeColor(sites,"OrganizationFormalName",NA,latVar,lonVar,
-             sizeThresh=NA,colThresh=1:16,
-             colVector=colors,colBinText=unique(sites$OrganizationFormalName),
+             sizeThresh=NA,colThresh=NA,
+             colVector=colors,colBinText=NA,
              colText = "Agencies",
              xmin,xmax,ymin,ymax,xleft,ytop,
              LegCex=0.75)
