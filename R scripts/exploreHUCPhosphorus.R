@@ -4,7 +4,7 @@ library(USGSHydroTools)
 
 data <- readWQPdata(huc="0410*", characteristicName="Phosphorus")
 
-sites <-  readWQPsites(huc="0410*", characteristicName="Phosphorus")
+sites <-  whatWQPsites(huc="0410*", characteristicName="Phosphorus")
 
 data_bySite <- group_by(data, MonitoringLocationIdentifier)
 summarize <-  summarise(data_bySite,
