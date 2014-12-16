@@ -2,9 +2,9 @@ library(dataRetrieval)
 library(dplyr)
 library(USGSHydroTools)
 
-data <- getWQPData(huc="0410*", characteristicName="Phosphorus")
+data <- readWQPData(huc="0410*", characteristicName="Phosphorus")
 
-sites <-  getWQPSites(huc="0410*", characteristicName="Phosphorus")
+sites <-  readWQPSites(huc="0410*", characteristicName="Phosphorus")
 
 data_bySite <- group_by(data, MonitoringLocationIdentifier)
 summarize <-  summarise(data_bySite,
