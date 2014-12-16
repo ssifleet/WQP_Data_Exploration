@@ -2,9 +2,9 @@ library(dataRetrieval)
 library(dplyr)
 library(USGSHydroTools)
 
-# data <- getWQPData(huc="0410*")
+# data <- readWQPdata(huc="0410*")
 
-sites <-  getWQPSites(huc="0410*")
+sites <-  whatWQPsites(huc="0410*")
 
 
 orggroup <- unique(sites$OrganizationFormalName)
