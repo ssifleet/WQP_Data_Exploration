@@ -5,12 +5,9 @@ This gitHub repository will store information on tools to use the [Water Quality
 
 
 ###Package Installation
-The `dataRetrieval` package is helpful for importing Water Quality Portal data into the R environment. The following command will install the latest stable release. 
+The `dataRetrieval` package is helpful for importing Water Quality Portal data into the R environment. 
 
-    install.packages("dataRetrieval", 
-  	  repos=c("http://usgs-r.github.com","http://cran.us.r-project.org"),
-  	  dependencies=TRUE,
-  	  type="both")
+    install.packages("dataRetrieval"))
       
 Alternatively, the 'in-development' version of `dataRetrieval` can be installed with the `devtools` package using the following command:
 
